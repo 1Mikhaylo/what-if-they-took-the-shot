@@ -206,7 +206,7 @@ If you use this tool or methodology in research, please cite:
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **StatsBomb** for open shot data
 - **Football Manager** for player ratings reference
@@ -216,7 +216,7 @@ If you use this tool or methodology in research, please cite:
 
 ---
 
-## 🐛 Known Issues & Future Work
+##  Known Issues & Future Work
 
 - Add more seasons (expand beyond 2015-16)
 - Include more leagues (currently Europe top 5 only)
