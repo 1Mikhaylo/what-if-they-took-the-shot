@@ -30,6 +30,11 @@ code, pre {
 [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
     color: #3B82F6 !important;
 }
+
+/* Hide keyboard_double_ text in collapsed sidebar */
+[data-testid="collapsedControl"] div {
+    display: none !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
