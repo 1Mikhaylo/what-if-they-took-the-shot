@@ -1,0 +1,149 @@
+player_id,player_name,player_idx,raw_finishing,raw_longshots
+2955,Ronny Rodelin,0,10,14
+2988,Memphis Depay,1,14,16
+3010,Corentin Jean,2,13,10
+3038,Andy Delort,3,14,12
+3043,Christian Dannemann Eriksen,4,13,12
+3049,Matt Ritchie,5,15,16
+3053,Leroy Sané,6,14,14
+3057,Jonjo Shelvey,7,11,15
+3083,Heung-Min Son,8,17,15
+3089,Kevin De Bruyne,9,16,16
+3097,Pascal Groß,10,12,14
+3114,Emiliano Sala,11,14,9
+3122,Yannis Salibur,12,12,12
+3179,Nolan Roux,13,12,13
+3186,Julian Draxler,14,13,17
+3193,Bernardo Mota Veiga de Carvalho e Silva,15,14,11
+3196,Wahbi Khazri,16,11,12
+3210,Valère Germain,17,14,12
+3213,Jimmy Briand,18,13,10
+3233,Raheem Sterling,19,12,9
+3237,Sergio Leonel Agüero del Castillo,20,17,15
+3246,Guido Marcelo Carrillo,21,14,12
+3275,Henrikh Mkhitaryan,22,13,13
+3277,Yohan Cabaye,23,13,14
+3337,Jermain Defoe,24,16,13
+3346,Joshua King,25,12,9
+3349,Michail Antonio,26,11,10
+3385,Alexis Alejandro Sánchez Sánchez,27,16,14
+3420,Rémy Cabella,28,12,12
+3436,Idrissa Gana Gueye,29,6,13
+3450,Jordan Ayew,30,15,13
+3451,Alexandre Lacazette,31,17,12
+3454,Troy Deeney,32,14,14
+3491,Dimitri Payet,33,15,15
+3500,Granit Xhaka,34,9,15
+3517,Aaron Ramsey,35,12,12
+3531,Mohamed Salah,36,15,12
+3533,Xherdan Shaqiri,37,12,14
+3538,Wayne Mark Rooney,38,15,14
+3552,Benjamin Jeannot,39,13,12
+3567,Georginio Wijnaldum,40,14,12
+3585,Erik Lamela,41,13,13
+3598,Wilfried Guemiand Bony,42,16,10
+3604,Olivier Giroud,43,16,14
+3621,Eden Hazard,44,13,13
+3625,Sofiane Boufal,45,13,13
+3629,Sadio Mané,46,14,12
+3712,Pierre-Emerick Aubameyang,47,14,10
+3814,Riyad Mahrez,48,14,12
+3842,Shane Long,49,11,9
+3944,Gylfi Þór Sigurðsson,50,14,16
+4271,Andy Carroll,51,14,11
+4275,Ross Barkley,52,12,14
+4383,Nicolas de Roussel de Préville,53,8,13
+4891,Ibrahim Afellay,54,14,12
+5198,Diego da Silva Costa,55,15,11
+5204,Bruno Miguel Borges Fernandes,56,11,14
+5246,Luis Alberto Suárez Díaz,57,18,16
+5458,Odion Jude Ighalo,58,16,10
+5477,Ousmane Dembélé,59,14,13
+5480,Corentin Tolisso,60,10,10
+5487,Antoine Griezmann,61,18,14
+5497,Gonzalo Gerardo Higuaín,62,20,15
+5557,Timo Werner,63,14,11
+5559,Marco Reus,64,16,14
+5562,Thomas Müller,65,15,10
+5630,Dries Mertens,66,14,14
+5632,Thorgan Hazard,67,12,14
+5633,Yannick Ferreira Carrasco,68,14,13
+5667,Kamil Grosicki,69,12,13
+5668,Robert Lewandowski,70,17,12
+5687,Takashi Inui,71,10,10
+5718,Rodrigo Moreno Machado,72,9,9
+5726,Khalid Boutaïb,73,13,13
+5743,Paulo Bruno Exequiel Dybala,74,16,15
+6324,Leon Goretzka,75,13,11
+6399,Gareth Frank Bale,76,17,19
+6401,Kevin Gameiro,77,15,13
+6581,Jonathan Rodríguez Menéndez,78,12,11
+6600,Claudio Beauvue,79,15,11
+6661,Ryad Boudebouz,80,12,10
+6686,Giampaolo Pazzini,81,14,12
+6719,Franco Damián Vázquez,82,13,15
+6723,Wissam Ben Yedder,83,16,12
+6732,Lucas Pérez Martínez,84,14,8
+6759,Roberto Soriano,85,12,13
+6859,Nicola Sansone,86,13,14
+6862,Cédric Bakambu,87,14,12
+6918,Isaac Ajayi Success,88,13,12
+6950,Alberto Paloschi,89,13,10
+6962,Radja Nainggolan,90,14,15
+6979,Stephan El Shaarawy,91,15,13
+7006,Alejandro Darío Gómez,92,11,14
+7011,Fabio Quagliarella,93,14,17
+7026,Giacomo Bonaventura,94,11,15
+7029,José María Callejón Bueno,95,9,10
+7037,Lorenzo Insigne,96,12,13
+7054,Manuel Pucciarelli,97,12,11
+7131,Domenico Berardi,98,15,13
+7141,Giuseppe Rossi,99,16,15
+7150,Riccardo Saponara,100,12,12
+7415,Jessy Pi,101,7,11
+7471,Andrea Belotti,102,16,12
+7776,Antonio Candreva,103,13,15
+7777,Federico Bernardeschi,104,13,13
+7788,Ciro Immobile,105,17,13
+7900,Tiago Manuel Dias Correia,106,13,4
+8060,Klaas-Jan Huntelaar,107,18,13
+8103,Mattia Destro,108,16,11
+8173,Marco Parolo,109,14,16
+8180,Leonardo Pavoletti,110,16,8
+8213,Karim Bellarabi,111,12,11
+8215,Kevin Volland,112,14,14
+8218,Arjen Robben,113,17,17
+8243,Daniel Didavi,114,15,17
+8272,Cyril Théréau,115,14,11
+8309,Michael Gregoritsch,116,16,15
+8386,Max Kruse,117,15,13
+8575,Salomon Armand Magloire Kalou,118,13,12
+8679,Yunus Mallı,119,13,11
+8806,Lars Edi Stindl,120,13,14
+8807,Raúl Marcelo Bobadilla,121,10,11
+8871,Marco Borriello,122,13,12
+9723,Sandro Wagner,123,13,8
+10281,André Schürrle,124,14,16
+10802,André Filipe Tavares Gomes,125,11,15
+10919,Juraj Kucka,126,8,13
+10955,Harry Kane,127,16,15
+10960,Jamie Vardy,128,16,10
+11062,Graziano Pellè,129,16,13
+12624,Anthony Ujah,130,13,9
+13613,Daniel Ciofani,131,15,8
+15296,Romain Alessandrini,132,11,13
+15689,Floyd Ayité,133,12,13
+16308,Leandro Daniel Paredes,134,11,15
+16462,Hatem Ben Arfa,135,12,14
+19362,Rudy Gestede,136,13,12
+19677,Karim Benzema,137,16,13
+19688,Jason Puncheon,138,13,14
+20004,Paul Pogba,139,15,18
+20039,Anthony Martial,140,15,11
+20521,Bafétimbi Gomis,141,15,11
+23486,Anthony Modeste,142,15,9
+24235,Federico Dionisi,143,15,11
+27110,Antonio Floro Flores,144,12,13
+27853,Mauro Matías Zárate,145,12,14
+40252,Massimo Maccarone,146,15,14
+401470,Fabien Camus,147,10,14
