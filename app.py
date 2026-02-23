@@ -31,7 +31,12 @@ code, pre {
     color: #3B82F6 !important;
 }
 
-/* Hide keyboard_double_ text in collapsed sidebar */
+/* Hide keyboard_double_ app title at top of sidebar */
+[data-testid="stSidebarHeader"] {
+    display: none !important;
+}
+
+/* Also hide in collapsed state */
 [data-testid="collapsedControl"] div {
     display: none !important;
 }
