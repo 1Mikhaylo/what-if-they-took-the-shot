@@ -146,6 +146,39 @@ shot_angle_deg = st.sidebar.slider("Angle (degrees)", 0, 90,
     active_preset["angle"] if active_preset else 30, 5)
 shot_angle = shot_angle_deg * (3.14159 / 180)
 
+# Mini-pitch angle visualization
+import math
+t = shot_angle_deg / 90
+player_x = 70 + t * 30
+player_y = 25 + t * 65
+goal_left_x = 70
+goal_right_x = 130
+goal_y = 18
+
+st.sidebar.markdown(f"""
+<div style="display:flex; justify-content:center; padding:4px 0;">
+<svg width="220" height="105" viewBox="0 0 220 105">
+    <rect x="5" y="5" width="210" height="95" rx="6" fill="#0D1F17" stroke="#10B981" stroke-width="1.5" opacity="0.6"/>
+    <!-- Goal -->
+    <rect x="{goal_left_x}" y="{goal_y - 5}" width="{goal_right_x - goal_left_x}" height="10" rx="3" fill="#F9FAFB" opacity="0.95"/>
+    <!-- Angle cone fill -->
+    <polygon points="{player_x},{player_y} {goal_left_x},{goal_y} {goal_right_x},{goal_y}" 
+        fill="#FFD700" fill-opacity="0.18" stroke="none"/>
+    <!-- Dashed lines to posts -->
+    <line x1="{player_x}" y1="{player_y}" x2="{goal_left_x}" y2="{goal_y}" 
+        stroke="#FFD700" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.8"/>
+    <line x1="{player_x}" y1="{player_y}" x2="{goal_right_x}" y2="{goal_y}" 
+        stroke="#FFD700" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.8"/>
+    <!-- Player dot -->
+    <circle cx="{player_x}" cy="{player_y}" r="7" fill="#FF6B35" stroke="white" stroke-width="2.5"/>
+    <!-- Angle label -->
+    <text x="{player_x + 14}" y="{player_y + 5}" text-anchor="start" fill="#FFD700" font-size="15" font-weight="700">{shot_angle_deg}°</text>
+    <!-- "Goal" label -->
+    <text x="100" y="{goal_y + 2}" text-anchor="middle" fill="#0A0E1A" font-size="9" font-weight="700">GOAL</text>
+</svg>
+</div>
+""", unsafe_allow_html=True)
+
 # INPUT VALIDATION
 if shot_distance < 2.0:
     st.sidebar.warning("⚠️ Distance < 2m is extremely close. Adjust if needed.")
@@ -175,10 +208,30 @@ else:
 
 body_part = st.sidebar.selectbox("Body Part:", BODY_PART_OPTIONS,
     index=BODY_PART_OPTIONS.index(body_part_default))
-    # Always editable - no disabled parameter
-technique = st.sidebar.selectbox("Technique:", TECHNIQUE_OPTIONS,
-    index=TECHNIQUE_OPTIONS.index(active_preset["technique"]) if active_preset else 0)
-    # NO disabled parameter - always editable
+
+if not active_preset:
+    st.sidebar.caption(f"ℹ️ Auto-selected {preferred_foot} Foot based on player data. You can change it to explore different scenarios.")
+
+# Filter techniques based on body part
+if body_part == "Head":
+    allowed_techniques = ["Normal", "Diving Header"]
+elif body_part == "Other":
+    allowed_techniques = ["Normal"]
+elif active_preset and st.session_state.preset == "Penalty":
+    allowed_techniques = ["Normal"]
+else:  # Left Foot or Right Foot
+    allowed_techniques = ["Normal", "Half Volley", "Volley", "Lob", "Overhead Kick", "Backheel"]
+
+# Get default technique (from preset or first available)
+if active_preset and active_preset["technique"] in allowed_techniques:
+    tech_default = allowed_techniques.index(active_preset["technique"])
+else:
+    tech_default = 0
+
+technique = st.sidebar.selectbox("Technique:", allowed_techniques, index=tech_default)
+
+if body_part == "Head":
+    st.sidebar.caption("ℹ️ Technique options filtered for headers")
 
 st.sidebar.markdown("---")
 # Situation
@@ -331,10 +384,9 @@ if calculate_btn:
     
     # Shot position - Y varies with angle
     shot_x = 120 - shot_distance
-    # Map angle to Y position: 0° (very wide/low) to 90° (central)
-    angle_normalized = shot_angle / 1.57
-    shot_y = 40 - (1 - angle_normalized) * 18 
-    
+    # 0° = near touchline (y=5), 90° = central (y=40)
+    t = shot_angle_deg / 90
+    shot_y = 15 + t * 25  
     goal_x = 120
     goal_y = 40
     
@@ -385,26 +437,19 @@ if calculate_btn:
                      label=f'{num_defenders} Defender(s)')
     
     # Draw angle visualization
+    goal_center_y = 40
+    spread = t * 4  
+    # Draw angle visualization — fixed goalposts, player moves wide
+    cone_near = 36   # StatsBomb near post Y (fixed)
+    cone_far = 44    # StatsBomb far post Y (fixed)
     
-    # Draw angle visualization - actually calculate based on angle
-    goal_center = 40
-    goal_height = 8  # StatsBomb goal height
-    
-    # Calculate goal posts visible from shot position based on actual angle
-    import math
-    half_angle = shot_angle / 2
-    offset = shot_distance * math.tan(half_angle)
-    
-    goal_post_top = min(goal_center + offset, goal_center + goal_height/2)
-    goal_post_bottom = max(goal_center - offset, goal_center - goal_height/2)
-    
-    ax.plot([shot_x, goal_x], [shot_y, goal_post_top], 
+    ax.plot([shot_x, goal_x], [shot_y, cone_near], 
            color='#FFD700', linewidth=2, linestyle='--', alpha=0.6, zorder=1)
-    ax.plot([shot_x, goal_x], [shot_y, goal_post_bottom], 
+    ax.plot([shot_x, goal_x], [shot_y, cone_far], 
            color='#FFD700', linewidth=2, linestyle='--', alpha=0.6, zorder=1)
     
     angle_x = [shot_x, goal_x, goal_x, shot_x]
-    angle_y = [shot_y, goal_post_top, goal_post_bottom, shot_y]
+    angle_y = [shot_y, cone_near, cone_far, shot_y]
     ax.fill(angle_x, angle_y, color='#FFD700', alpha=0.15, zorder=1)
     
     # Shot location
