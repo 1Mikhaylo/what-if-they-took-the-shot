@@ -177,6 +177,21 @@ st.sidebar.markdown("""
     🎮 <b style="color:#F9FAFB;">FM 2017</b> ratings
 </div>
 """, unsafe_allow_html=True)
+st.sidebar.markdown("---")
+
+if st.sidebar.button("⚽ Shot Predictor", use_container_width=True):
+    st.switch_page("pages/1_Shot_Predictor.py")
+if st.sidebar.button("👤 Player Profiles", use_container_width=True):
+    st.switch_page("pages/2_Player_Profiles.py")
+if st.sidebar.button("⇄ Counterfactual", use_container_width=True):
+    st.switch_page("pages/3_Counterfactual.py")
+if st.sidebar.button("📄 About", use_container_width=True):
+    st.switch_page("pages/4_About.py")
+
+st.sidebar.markdown("---")
+
+st.sidebar.markdown("""
+<div style="font-size:0.78rem; color:#9CA3AF; line-height:2;">
 
 st.sidebar.markdown("---")
 
