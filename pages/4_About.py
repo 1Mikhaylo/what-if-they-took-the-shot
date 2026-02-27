@@ -1,23 +1,22 @@
 import streamlit as st
 
-st.set_page_config(page_title="About", page_icon="📖", layout="wide")
+st.set_page_config(page_title="About", page_icon="ℹ️", layout="wide")
 
 # Logo + Title (from app.py)
 st.markdown("""
 <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-    <div style="
-        width: 56px; 
-        height: 56px; 
-        background: linear-gradient(135deg, #3B82F6, #10B981);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        font-weight: 700;
-        color: white;
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-    ">W</div>
+    <svg width="48" height="48" viewBox="0 0 56 56" fill="none">
+        <rect width="56" height="56" rx="12" fill="#0D1F17"/>
+        <rect x="10" y="4" width="36" height="24" rx="1" stroke="#10B981" stroke-width="1.2" fill="none" opacity="0.4"/>
+        <line x1="20" y1="4" x2="36" y2="4" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="18" y="4" width="20" height="10" rx="1" stroke="#10B981" stroke-width="0.8" fill="none" opacity="0.3"/>
+        <circle cx="28" cy="22" r="1.5" fill="#10B981" opacity="0.5"/>
+        <circle cx="28" cy="42" r="4" fill="#F9FAFB" opacity="0.9"/>
+        <path d="M28 38 L22 10" stroke="#3B82F6" stroke-width="1.8" stroke-dasharray="3 2" stroke-linecap="round"/>
+        <path d="M28 38 L34 10" stroke="#FF6B35" stroke-width="1.8" stroke-dasharray="3 2" stroke-linecap="round"/>
+        <circle cx="22" cy="10" r="2.5" fill="#3B82F6" opacity="0.8"/>
+        <circle cx="34" cy="10" r="2.5" fill="#FF6B35" opacity="0.8"/>
+    </svg>
     <h1 style="margin: 0; font-size: 2.5rem; font-weight: 700; color: #F9FAFB;">
         What If They Took The Shot?
     </h1>
@@ -125,7 +124,7 @@ with col4:
 
 with col5:
     st.markdown("""
-    **🔄 Counterfactual Simulator**
+    **⇄ Counterfactual Simulator**
     
     Answer "what if" questions:
     - What if Salah took Kane's shots?
