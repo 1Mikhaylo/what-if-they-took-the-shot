@@ -8,6 +8,15 @@ pio.templates.default = 'xg_dark'
 
 st.set_page_config(page_title="Player Profiles", page_icon="👤", layout="wide")
 
+
+st.markdown("""
+<style>
+[data-testid="stHeaderActionElements"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("👤 Player Profiles")
 st.markdown("Explore individual finishing fingerprints and specialization patterns")
 
