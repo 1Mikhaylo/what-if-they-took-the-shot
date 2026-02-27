@@ -190,18 +190,6 @@ st.sidebar.markdown("""
 
 st.sidebar.markdown("---")
 
-with st.sidebar.expander("How It Works"):
-    st.sidebar.markdown("""
-    **1. Bayesian Hierarchical Model**  
-    Combines StatsBomb shot data with Football Manager ratings as informed priors.
-    
-    **2. Player-Specific Effects**  
-    Each player gets a unique finishing coefficient — not treated as average.
-    
-    **3. Counterfactual Reasoning**  
-    Swap abilities between players to answer "what if?" scenarios.
-    """)
-
 # ═══════════════════════════════════════════════════════════════
 # THREE FEATURE CARDS
 # ═══════════════════════════════════════════════════════════════
