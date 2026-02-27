@@ -35,9 +35,6 @@ code, pre {
     display: none !important;
 }
 
-[data-testid="collapsedControl"] div {
-    display: none !important;
-}
 
 /* ═══════════════════════════════════════════════ */
 /* WELCOME CARD STYLES                            */
