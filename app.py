@@ -170,16 +170,6 @@ st.markdown("""
 # ═══════════════════════════════════════════════════════════════
 
 st.sidebar.markdown("""
-<div style="text-align:center; padding: 16px 0 8px 0;">
-    with st.sidebar.expander("How It Works"):
-    <div style="font-size:0.8rem; color:#6B7280; margin-top:4px;">Hierarchical Bayesian xG</div>
-    <div style="font-size:0.75rem; color:#6B7280;">Mahmudlu, Karakuş & Arkadaş (2025)</div>
-</div>
-""", unsafe_allow_html=True)
-
-st.sidebar.markdown("---")
-
-st.sidebar.markdown("""
 <div style="font-size:0.78rem; color:#9CA3AF; line-height:2;">
     📊 <b style="color:#F9FAFB;">148</b> players<br>
     ⚽ <b style="color:#F9FAFB;">9,970</b> shots<br>
