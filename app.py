@@ -128,6 +128,12 @@ code, pre {
 .stButton > button {
     border-radius: 0 0 12px 12px;
 }
+
+/* Hide anchor link icons from headers */
+h1 a, h2 a, h3 a, h4 a {
+    display: none !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
