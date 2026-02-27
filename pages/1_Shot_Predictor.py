@@ -138,7 +138,7 @@ with center:
     st.markdown("---")
 
     # ── Shot Location ────────────────────────────────────────────
-    st.subheader("📍 Shot Location")
+    st.subheader(" Shot Location")
     col1, col2 = st.columns(2)
     with col1:
         shot_distance = st.number_input("Distance (m)", 1.0, 40.0,
@@ -150,7 +150,10 @@ with center:
             disabled=active_preset is not None)
 
     shot_angle_deg = st.slider("Angle (degrees)", 0, 90,
-        active_preset["angle"] if active_preset else 30, 5)
+        active_preset["angle"] if active_preset else 30, 5,
+        disabled=st.session_state.get('preset') == "Penalty")
+    shot_angle = shot_angle_deg * (3.14159 / 180)
+
     shot_angle = shot_angle_deg * (3.14159 / 180)
 
     # Mini-pitch angle visualization
@@ -194,7 +197,7 @@ with center:
     st.markdown("---")
 
     # ── Shot Mechanics ────────────────────────────────────────────
-    st.subheader("🦵 Shot Mechanics")
+    st.subheader(" Shot Mechanics")
 
     if active_preset:
         body_part_default = active_preset["body_part"]
