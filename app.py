@@ -157,10 +157,8 @@ st.markdown("""
     </h1>
 </div>
 """, unsafe_allow_html=True)
-
 st.markdown("### Hierarchical Bayesian xG — Player-Specific Finishing Analysis")
 st.markdown("*Mahmudlu, Karakuş & Arkadaş (2025)*")
-
 st.markdown("""
 <p style="font-size: 1.1rem; color: #9CA3AF; margin: 16px 0 32px 0;">
     Explore how individual finishing ability changes expected goals — powered by Bayesian inference and Football Manager ratings.
@@ -168,11 +166,46 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════
-# THREE FEATURE CARDS
+# SIDEBAR CONTENT
 # ═══════════════════════════════════════════════════════════════
 
-col1, col2, col3 = st.columns(3, gap="medium")
+st.sidebar.markdown("""
+<div style="text-align:center; padding: 16px 0 8px 0;">
+    <div style="font-size:1.4rem; font-weight:700; color:#F9FAFB;">⚽ What If They Took The Shot?</div>
+    <div style="font-size:0.8rem; color:#6B7280; margin-top:4px;">Hierarchical Bayesian xG</div>
+    <div style="font-size:0.75rem; color:#6B7280;">Mahmudlu, Karakuş & Arkadaş (2025)</div>
+</div>
+""", unsafe_allow_html=True)
 
+st.sidebar.markdown("---")
+
+st.sidebar.markdown("""
+<div style="font-size:0.78rem; color:#9CA3AF; line-height:2;">
+    📊 <b style="color:#F9FAFB;">148</b> players<br>
+    ⚽ <b style="color:#F9FAFB;">9,970</b> shots<br>
+    📅 <b style="color:#F9FAFB;">2015-16</b> season<br>
+    🎮 <b style="color:#F9FAFB;">FM 2017</b> ratings
+</div>
+""", unsafe_allow_html=True)
+
+st.sidebar.markdown("---")
+
+with st.sidebar.expander("ℹ️ How It Works"):
+    st.markdown("""
+    **1. Bayesian Hierarchical Model**  
+    Combines StatsBomb shot data with Football Manager ratings as informed priors.
+    
+    **2. Player-Specific Effects**  
+    Each player gets a unique finishing coefficient — not treated as average.
+    
+    **3. Counterfactual Reasoning**  
+    Swap abilities between players to answer "what if?" scenarios.
+    """)
+
+# ═══════════════════════════════════════════════════════════════
+# THREE FEATURE CARDS
+# ═══════════════════════════════════════════════════════════════
+col1, col2, col3 = st.columns(3, gap="medium")
 # --- CARD 1: Shot Predictor ---
 with col1:
     st.markdown("""
