@@ -212,7 +212,7 @@ if st.button("🔄 RUN COUNTERFACTUAL ANALYSIS", type="primary", use_container_w
         col_table1, col_table2, col_table3 = st.columns(3)
         with col_table1:
             favorable = sum(1 for d in player_b_xg_list if d > player_a_xg_list[player_b_xg_list.index(d)])
-            st.metric("Shots Favoring B", f"{favorable}/{len(player_a_shots)}")
+            st.metric(f"{player_b} Better On", f"{favorable}/{len(player_a_shots)}")
         with col_table2:
             avg_delta = np.mean([b - a for a, b in zip(player_a_xg_list, player_b_xg_list)])
             st.metric("Avg Delta per Shot", f"{avg_delta:+.3f}")
