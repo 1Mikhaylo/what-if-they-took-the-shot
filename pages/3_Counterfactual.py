@@ -11,6 +11,14 @@ pio.templates.default = 'xg_dark'
 
 st.set_page_config(page_title="Counterfactual Simulator", page_icon="🔀", layout="wide")
 
+st.markdown("""
+<style>
+[data-testid="stHeaderActionElements"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("⇄ Counterfactual Simulator")
 st.markdown("Answer the question: *What if Player B took Player A's shots?*")
 
