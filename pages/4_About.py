@@ -41,7 +41,6 @@ logistic regression with informed priors to stabilize player-level estimates, es
 - Model achieves strong external validity: hierarchical and baseline predictions correlate at R² = 0.75
 - XGBoost benchmark validated against StatsBomb xG reaches R² = 0.833
 - Uncovers interpretable specialization profiles (one-on-one finishing, long-range shooting, first-touch execution)
-- Identifies underrated players (Immobile, Belotti) and overrated players (Agüero, Suárez)
 - Case studies: Sansone would generate +2.2 xG from Berardi's chances; Vardy-Giroud substitutions reveal strong asymmetry
 
 This work provides an **uncertainty-aware tool** for player evaluation, recruitment, and tactical planning.
