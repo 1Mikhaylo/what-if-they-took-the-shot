@@ -6,6 +6,13 @@ import plotly.io as pio
 pio.templates.default = 'xg_dark'
 
 st.set_page_config(page_title="Shot Predictor", page_icon="⚽", layout="wide")
+st.markdown("""
+<style>
+[data-testid="stHeaderActionElements"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.title("⚽ Shot Predictor")
 st.markdown("Build a shot scenario and compare Bayesian vs XGBoost predictions")
