@@ -171,7 +171,7 @@ st.markdown("""
 
 st.sidebar.markdown("""
 <div style="text-align:center; padding: 16px 0 8px 0;">
-    <div style="font-size:1.4rem; font-weight:700; color:#F9FAFB;">⚽ What If They Took The Shot?</div>
+    <div style="font-size:1.1rem; font-weight:700; color:#F9FAFB;">⚽ What If They Took The Shot?</div>
     <div style="font-size:0.8rem; color:#6B7280; margin-top:4px;">Hierarchical Bayesian xG</div>
     <div style="font-size:0.75rem; color:#6B7280;">Mahmudlu, Karakuş & Arkadaş (2025)</div>
 </div>
@@ -191,7 +191,7 @@ st.sidebar.markdown("""
 st.sidebar.markdown("---")
 
 with st.sidebar.expander("ℹ️ How It Works"):
-    st.markdown("""
+    st.sidebar.markdown("""
     **1. Bayesian Hierarchical Model**  
     Combines StatsBomb shot data with Football Manager ratings as informed priors.
     
