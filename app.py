@@ -8,6 +8,7 @@ st.set_page_config(
 )
 
 # Global fonts and styling
+
 # Global fonts and styling
 st.markdown("""
 <style>
@@ -34,26 +35,6 @@ code, pre {
     display: none !important;
 }
 [data-testid="collapsedControl"] div {
-    display: none !important;
-}
-/* Mobile specific fixes */
-button[kind="header"] {
-    display: none !important;
-}
-[data-testid="stSidebarCollapsedControl"] {
-    display: none !important;
-}
-section[data-testid="stSidebarCollapsedControl"] {
-    display: none !important;
-}
-/* Hide any text rendering as icon name */
-[data-testid="stSidebar"] ~ div {
-    display: none !important;
-}
-span:contains("double_arrow_right") {
-    display: none !important;
-}
-span:contains("keyboard_double") {
     display: none !important;
 }
 </style>
