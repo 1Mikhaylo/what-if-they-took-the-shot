@@ -9,6 +9,7 @@ st.set_page_config(
 
 # Global fonts and styling
 
+
 # Global fonts and styling
 st.markdown("""
 <style>
@@ -36,6 +37,10 @@ code, pre {
     display: none !important;
 }
 [data-testid="collapsedControl"] div {
+    display: none !important;
+}
+/* Exact fix for double_arrow_right icon text */
+[data-testid="stIconMaterial"] {
     display: none !important;
 }
 
