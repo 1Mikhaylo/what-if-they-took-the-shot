@@ -37,7 +37,6 @@ code, pre {
 [data-testid="collapsedControl"] div {
     display: none !important;
 }
-</style>
 
 /* ═══════════════════════════════════════════════ */
 /* WELCOME CARD STYLES                            */
