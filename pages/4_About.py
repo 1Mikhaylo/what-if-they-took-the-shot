@@ -2,6 +2,17 @@ import streamlit as st
 
 st.set_page_config(page_title="About", page_icon="ℹ️", layout="wide")
 
+st.markdown("""
+<style>
+h1 a, h2 a, h3 a, h4 a {
+    display: none !important;
+}
+[data-testid="stMarkdownContainer"] a[href^="#"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Logo + Title (from app.py)
 st.markdown("""
 <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
