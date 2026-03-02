@@ -11,6 +11,8 @@ st.set_page_config(
 
 
 # Global fonts and styling
+
+# Global fonts and styling
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&display=swap');
@@ -39,9 +41,10 @@ code, pre {
 [data-testid="collapsedControl"] div {
     display: none !important;
 }
-/* Exact fix for double_arrow_right icon text */
+/* Hide only the icon text, keep the button visible */
 [data-testid="stIconMaterial"] {
-    display: none !important;
+    font-size: 0 !important;
+    color: transparent !important;
 }
 
 /* ═══════════════════════════════════════════════ */
