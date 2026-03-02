@@ -7,12 +7,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"  
 )
 
-# Global fonts and styling
-
-
-# Global fonts and styling
-
-# Global fonts and styling
 
 # Global fonts and styling
 st.markdown("""
