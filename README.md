@@ -86,23 +86,28 @@ Interactive web application for exploring **Hierarchical Bayesian xG (expected g
 ```
 FootballScouting/
 ├── app.py                      # Home page
+├── config.py                   # Configuration settings
 ├── pages/
 │   ├── 1_Shot_Predictor.py
 │   ├── 2_Player_Profiles.py
-│   └── 3_Counterfactual.py
+│   ├── 3_Counterfactual.py
+│   └── 4_About.py
 ├── utils/
-│   ├── data_loader.py          # Data loading with caching
-│   ├── feature_engineering.py  # Feature vector builders
 │   ├── bayesian_engine.py      # Bayesian xG predictions
-│   ├── xgboost_engine.py       # XGBoost predictions
-│   ├── plotly_theme.py         # Custom chart styling
+│   ├── data_loader.py          # Data loading with caching
+│   ├── error_handler.py        # Error handling utilities
+│   ├── feature_engineering.py  # Feature vector builders
 │   ├── footer.py               # Reusable footer component
-│   └── error_handler.py        # Error handling utilities
+│   ├── plotly_theme.py         # Custom chart styling
+│   └── xgboost_engine.py       # XGBoost predictions
 ├── data/
 │   ├── scouting_model.json     # Bayesian model parameters
 │   ├── xgboost_model.pkl       # XGBoost trained model
 │   ├── xg_model_input_full.csv # Shot dataset
-│   └── player_id_mapping.csv   # Player metadata
+│   ├── player_id_mapping.csv   # Player metadata
+│   ├── player_preferred_foot.csv
+│   ├── player_label_encoder_oldmethod.joblib
+│   └── preprocessor_oldmethod.joblib
 ├── .streamlit/
 │   └── config.toml             # Dark theme configuration
 └── requirements.txt
