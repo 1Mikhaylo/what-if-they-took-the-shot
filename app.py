@@ -4,9 +4,10 @@ st.set_page_config(
     page_title="What If They Took The Shot?",
     page_icon="⚽",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"  
 )
 
+# Global fonts and styling
 # Global fonts and styling
 st.markdown("""
 <style>
@@ -35,6 +36,27 @@ code, pre {
 [data-testid="collapsedControl"] div {
     display: none !important;
 }
+/* Mobile specific fixes */
+button[kind="header"] {
+    display: none !important;
+}
+[data-testid="stSidebarCollapsedControl"] {
+    display: none !important;
+}
+section[data-testid="stSidebarCollapsedControl"] {
+    display: none !important;
+}
+/* Hide any text rendering as icon name */
+[data-testid="stSidebar"] ~ div {
+    display: none !important;
+}
+span:contains("double_arrow_right") {
+    display: none !important;
+}
+span:contains("keyboard_double") {
+    display: none !important;
+}
+</style>
 
 /* ═══════════════════════════════════════════════ */
 /* WELCOME CARD STYLES                            */
