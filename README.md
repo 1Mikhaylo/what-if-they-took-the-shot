@@ -2,7 +2,7 @@
 
 Interactive web application for exploring **Hierarchical Bayesian xG (expected goals)** models in football/soccer. Compare player-specific finishing abilities and run counterfactual analyses.
 
-**Live Demo:** [Coming soon on Streamlit Cloud]  
+**Live Demo:** [whatiftheytook.streamlit.app](https://whatiftheytook.streamlit.app)
 **Paper:** [arXiv:2511.23072](https://arxiv.org/abs/2511.23072)
 
 ---
