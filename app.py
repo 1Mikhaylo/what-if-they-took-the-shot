@@ -13,6 +13,8 @@ st.set_page_config(
 # Global fonts and styling
 
 # Global fonts and styling
+
+# Global fonts and styling
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&display=swap');
@@ -41,10 +43,15 @@ code, pre {
 [data-testid="collapsedControl"] div {
     display: none !important;
 }
-/* Hide only the icon text, keep the button visible */
+/* Replace icon text with visible arrow symbol */
 [data-testid="stIconMaterial"] {
     font-size: 0 !important;
     color: transparent !important;
+}
+[data-testid="stIconMaterial"]::after {
+    content: "☰" !important;
+    font-size: 20px !important;
+    color: white !important;
 }
 
 /* ═══════════════════════════════════════════════ */
