@@ -61,7 +61,7 @@ Interactive web application for exploring **Hierarchical Bayesian xG (expected g
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/what-if-they-took-the-shot.git
+   git clone https://github.com/1Mikhaylo/what-if-they-took-the-shot.git
    cd what-if-they-took-the-shot
 ```
 
