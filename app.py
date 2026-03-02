@@ -11,30 +11,30 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&display=swap');
-
 html, body, [class*="st-"] {
     font-family: 'Exo', sans-serif;
 }
-
 [data-testid="stMetricValue"],
 [data-testid="stMetricDelta"],
 code, pre {
     font-family: 'Roboto Mono', monospace;
 }
-
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg, #0F172A 0%, #0A0E1A 100%);
     border-right: 1px solid rgba(59, 130, 246, 0.2);
 }
-
 [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
     color: #3B82F6 !important;
 }
-
 [data-testid="stSidebarHeader"] {
     display: none !important;
 }
-
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+[data-testid="collapsedControl"] div {
+    display: none !important;
+}
 
 /* ═══════════════════════════════════════════════ */
 /* WELCOME CARD STYLES                            */
